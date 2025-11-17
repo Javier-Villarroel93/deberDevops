@@ -2,9 +2,9 @@ name: CI - Tests y Package
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "master" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "master" ]
 
 jobs:
   build-test-package:
@@ -27,7 +27,7 @@ jobs:
 
       - name: Ejecutar pruebas
         run: |
-          pytest
+          pytest -v
 
       - name: Construir package
         run: |
